@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+
+            background-image: url('img/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+
+        }
+
+        .leave {
+            padding-top: 30px;
+            width: 1536px;
+            height: 150px;
+            /* border: 1px solid black; */
+        }
+
+        .leave h1 {
+            font-weight: 500;
+        }
+
+        input {
+            height: 35px;
+            border-radius: 3px;
+            color: #6a6f77;
+            padding: 3px 13px;
+            outline: 0;
+            border: 1px solid #aedefc;
+            background-color: rgba(255, 255, 255, 0.3);
+            text-align: center;
+            font-size: 22px;
+            color: black;
+        }
+
+        input:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        input:focus {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        button {
+            width: 65px;
+            height: 35px;
+            background-color: #3487ff;
+            border: 0px solid #0c5fdb;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 5px 8px 0 rgba(24, 95, 255, .1);
+            color: #fff;
+            font-weight: lighter;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #3580eb;
+        }
+
+        .show {
+            width: 1536px;
+            height: 550px;
+            /* border: 1px solid black; */
+
+        }
+
+        .show li {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            /* background: #c3bed4; */
+            border-radius: 15%;
+            /* transition: all 0.2s; */
+            transition: transform 0.5s;
+        }
+
+        .show li:hover {
+            z-index: 999;
+            transform: scale(1.1, 1.1);
+            box-shadow: 0 0 10px 2px #555;
+        }
+
+        .fa {
+            float: right;
+            padding: 0 3px;
+            font-size: 30px;
+            line-height: 30px;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .return {
+            display: block;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            z-index: 999;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+            overflow: hidden;
+
+        }
+
+        .return i {
+            line-height: 50px;
+            font-size: 36px;
+            margin-right: 5px;
+        }
+
+        .return:hover i {
+            color: #f9499e;
+        }
+
+        .return:hover {
+            height: 150px;
+            border-radius: 60px;
+            ;
+            /* border: 1px solid black; */
+        }
+
+        .return div {
+            line-height: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="leave">
+        <h1 style="margin-top: 20px;">这是一个留言板</h1>
+        <p id="p">&nbsp</p>
+        <input type="text" id="one" value="">
+        <button onclick="func()">留言</button>
+        <button onclick="count()">计算条数</button>
+
+
+    </div>
+
+    <div class="show">
+        <ul id="ul" style="position: relative">
+
+        </ul>
+    </div>
+
+    <div class="return">
+        <a href="index.html"><i class="fa fa-home"></i></a>
+        <a href="classify.html"><div>分类</div></a>
+        <a href="MessageBoard.html"><div>留言</div></a>
+        <a href="about.html"><div>关于</div></a>
+    </div>
+
+    <script src="js/MB.js"></script>
+
+</body>
+
+</html>

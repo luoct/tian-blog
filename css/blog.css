@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background: #eee;
+    border-radius: 3px;
+    padding: 0 2px;
+}
+.content {
+    height: 1500px;
+    margin-top: 40px;
+}
+.blog {
+    float: left;
+    width: 70%;
+    overflow: hidden;
+}
+.blog .position {
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 8px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.position i {
+    padding: 0 3px;
+}
+.blog .article {
+    background: #fff;
+    border-radius: 8px;
+}
+.article .header {
+    height: 82px;
+    background-color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    border-radius: 8px;
+}
+.header div {
+    height: 34px;;
+    color: #444;
+    font-weight: 400;
+    font-size: 24px;
+    padding-left: 20px;
+}
+.article .meta {
+    font-size: 16px;
+    font-weight: 150;
+}
+.article .meta i {
+    color: #f9499e;
+    padding: 5px 8px;
+}
+.article .text {
+    font-weight: 100px;
+    line-height: 24px;
+    padding: 0 20px;
+}
+.article .text p {
+    margin: 10px 0;
+    font-weight: 150;
+}
+.blog .nextblog {
+    height: 55px;
+    line-height: 28px;
+    background: #FFF;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 2px 15px;
+}
+.blog .comment {
+    width: 95.5%;
+    background: #FFF;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 2px 20px;
+    padding-bottom: 50px; 
+}
+.comment i {
+    color: #00a1d6;
+    padding-right: 20px;
+}
+.comment h2+div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #00a1d6;
+    border-radius: 50%;
+    color: #888;
+    background: #fff;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    margin: 10px 0 0 20px;
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+}
+.comment textarea {
+    width: 680px;
+    height: 40px;
+    transform: translate(0, -15px);
+    border-color: #00a1d6;
+    border-radius: 8px;
+    padding: 18px 12px;
+    font-size: 16px;
+    outline:none
+}
+.comment button {
+    width: 70px;
+    height: 78px;
+    padding: 4px 15px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #00a1d6;
+    border: 1px solid #00a1d6;
+    outline: none;
+    cursor: pointer;
+    transform: translate(10px, -58px);
+}
+.comment button:hover {
+    background-color: #00b5e5;
+    border-color: #00b5e5;
+}
+.comment .con>span:nth-child(1) {
+    display: inline-block;
+    width: 680px;
+    border-bottom: 1px solid #00a1d6;
+    transform: translate(10px, 12px);
+}
+.comment .con>span:nth-child(2) {
+    border: 1px solid #00a1d6;
+    border-radius: 8px;
+    padding: 8px 8px;
+    border-bottom: 0px;
+    font-weight: 200;
+}
+.comment ul {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.comment ul li {
+    display: block;
+    width: 680px;
+    height: 70px;
+    margin-bottom: 30px;
+    border-bottom: 1px soild #4ac1e9;
+}
+.comment ul li::after {
+    content: '';
+    position: absolute; 
+    transform: translate(70px, 0px);
+    width: 610px;
+    height: 1px;
+    background: #e5e9ef;
+    margin-top: 10px;
+}
+/*  */
+li:hover img { 
+    transform: scale(1); 
+}
+/*  */
+.comment .tx {
+    width: 48px;
+    height: 48px;
+    background-size: 48px 48px;
+    border-radius: 50%;
+    float: left;
+}
+.comment .user {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-bottom: 4px;
+    left: 20px;
+    position: relative;
+    color: #fb7299;
+}
+.comment .text {
+    line-height: 20px;
+    padding: 2px 0;
+    font-size: 14px;
+    text-shadow: none;
+    overflow: hidden;
+    left: 20px;
+    position: relative;
+}
+.comment .info {
+    color: #99a2aa;
+    line-height: 26px;
+    font-size: 12px;
+    left: 20px;
+    position: relative;
+    border-bottom: 1px soild #4ac1e9;
+}
+.comment .info span {
+    margin-right: 20px;
+}
+.comment .info .like i {
+    color: #99a2aa;
+}
+.comment .info .like i:hover{
+    /* color: #fb929e; */
+    cursor: pointer;
+}
+.comment .info .reply:hover {
+    color: #00a1d6;
+    cursor: pointer;
+}
+.active {
+    color: #f30e5c!important;
+    animation:scale 0.7s;
+}
+@keyframes scale
+{
+    0%{transform: scale(1);}
+    25% {transform: scale(1.25);}
+    50% {transform: scale(1.5);}
+    75% {transform: scale(1.25);}
+    100% {transform: scale(1);}
+
+}

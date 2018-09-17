@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manage Blog</title>
+    <link rel="stylesheet" href="css/admin.css">
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="tx">
+                <img src="img/mytx.jpg" width="45%">
+                <div style="margin: 5px 0;">luoct</div>
+            </div>
+            <div class="sidebar-nav"><a href="admin.html">首 页</a></div>
+            <div class="sidebar-nav" style="color:#dd0a35;"><a href="manageBlog.html">管理博客</a></div>
+            <div class="sidebar-nav"><a href="NewBlog.html">新建博客</a></div>
+        </div>
+        <div class="box">
+            <div class="box-nav">
+                <div class="box-nav-options">博客管理</div>
+                <div class="user">
+                    <img src="img/mytx.jpg" width="40px;" style="border-radius: 50%;">
+                    <div class="user-options">
+                        <a href="index.html">退出登录</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-header">
+                &nbsp; &nbsp;博客管理
+            </div>
+            <div class="box-content-published">
+                <div class="txt-title">已发布 (共3篇)</div>
+                <div class="tools">
+                    <a href="">删除</a>
+                    <a href="">修改</a>
+                    <a class="dropdown1" href="javascript:void(0);">添加标签</a>
+                    <ul class="contextmenu">
+                        <li>html</li>
+                        <li>css</li>
+                        <li>js</li>
+                    </ul>
+                    <a class="dropdown2" href="javascript:void(0);">按...排序<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                </div>
+                <table cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="20"><input type="checkbox" name="fabu" id="all1"></td>
+                        <td width="500">题目</td>
+                        <td width="50">时间 </td>
+                    </tr>
+                </table>
+                <hr style="background: #aaa; height: 1px; margin: 3px 0;">
+                <table cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="20"><input type="checkbox" name="fabu"></td>
+                        <td width="500"><a href="blog1.html">关于响应式Web设计技巧以及入门</a></td>
+                        <td width="50">2018/08/20</td>
+                    </tr>
+                    <tr>
+                        <td width="20"><input type="checkbox" name="fabu"></td>
+                        <td width="500"><a href="blog1.html">关于响应式Web设计技巧以及入门</a></td>
+                        <td width="50">2018/08/20</td>
+                    </tr>
+                    <tr>
+                        <td width="20"><input type="checkbox" name="fabu"></td>
+                        <td width="500"><a href="blog1.html">关于响应式Web设计技巧以及入门</a></td>
+                        <td width="50">2018/08/20</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="box-content-drafts">
+                <div class="txt-title">草稿箱 (共1篇)</div>
+                <div class="tools">
+                    <a href="">删除</a>
+                    <a href="">修改</a>
+                    <a href="">发布</a>
+                    <a href="">添加标签</a>
+                    <a href="">按...排序<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                </div>
+                <table cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="20"><input type="checkbox" name="caogao" id="all2"></td>
+                        <td width="500">题目</td>
+                        <td width="50">时间 </td>
+                    </tr>
+                </table>
+                <hr style="background: #aaa; height: 1px; margin: 3px 0;">
+                <table cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="20"><input type="checkbox" name="caogao"></td>
+                        <td width="500"><a href="draft1.html">关于响应式Web设计技巧以及入门</a></td>
+                        <td width="50">2018/08/20</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <ul class="contextmenu">
+        <li>删除</li>
+        <li>修改</li>
+        <li>添加标签</li>
+    </ul>
+
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/m.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>classify search</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/classify.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">个人博客</div>
+        <ul class="starlist">
+            <li><a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="MessageBoard.html">留言</a></li>
+            <li><a href="classify.html" style="color: #f9499e;">分类</a></li>
+            <li><a href="index.html">首页</a></li>
+        </ul>
+        <img src="img/h.png" height ="66px" style="display:block; transform: translate(-230px, 0);">
+    </div>
+
+    <div class="content">
+        <div class="classify">
+            <div class="search-wrap">
+                <input type="text">
+                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+            </div>
+            <div class="filter-wrap">
+                <ul class="filter-type">
+                    <li>综合排序：</li>
+                    <li onclick="change1(this)" class="filter-item active">全部</li>
+                    <li onclick="change1(this)" class="filter-item">最多点击</li>
+                    <li onclick="change1(this)" class="filter-item">最新发布</li>
+                    <li onclick="change1(this)" class="filter-item">最多评论</li>
+                </ul>
+                <ul class="filter-type">
+                    <li>发布时间：</li>
+                    <li onclick="change2(this)" class="filter-item active">全部</li>
+                    <li onclick="change2(this)" class="filter-item">一天内</li>
+                    <li onclick="change2(this)" class="filter-item">一周内</li>
+                    <li onclick="change2(this)" class="filter-item">一个月内</li>
+                </ul>
+                <ul class="filter-type">
+                    <li>全部标签：</li>
+                    <li onclick="change3(this)" class="filter-item active">全部</li>
+                    <li onclick="change3(this)" class="filter-item">html5</li>
+                    <li onclick="change3(this)" class="filter-item">css3</li>
+                    <li onclick="change3(this)" class="filter-item">javascript</li>
+                    <li onclick="change3(this)" class="filter-item">bootstarp</li>
+                    <li onclick="change3(this)" class="filter-item">vue</li>
+                    <li onclick="change3(this)" class="filter-item">node.js</li>
+                </ul>
+                <ul class="filter-type">
+                    <li>文章类型：</li>
+                    <li onclick="change4(this)" class="filter-item active">全部</li>
+                    <li onclick="change4(this)" class="filter-item">技术杂谈</li>
+                    <li onclick="change4(this)" class="filter-item">生活感悟</li>
+                </ul>
+            </div>
+            <script>
+                var type = document.getElementsByClassName("filter-type");
+                var item1 = type[0].getElementsByClassName("filter-item");
+                var item2 = type[1].getElementsByClassName("filter-item");
+                var item3 = type[2].getElementsByClassName("filter-item");
+                var item4 = type[3].getElementsByClassName("filter-item");
+
+
+                function change1(obj) {
+                    for (let i = 0; i < item1.length; i++) {
+                        let a = item1[i];
+                        a.className = "filter-item";
+                    };
+                    obj.className = "filter-item active";
+                }
+                function change2(obj) {
+                    for (let i = 0; i < item2.length; i++) {
+                        let b = item2[i];
+                        b.className = "filter-item";
+                    };
+                    obj.className = "filter-item active";
+                }
+                function change3(obj) {
+                    for (let i = 0; i < item3.length; i++) {
+                        let c = item3[i];
+                        c.className = "filter-item";
+                    };
+                    obj.className = "filter-item active";
+                }
+                function change4(obj) {
+                    for (let i = 0; i < item4.length; i++) {
+                        let d = item4[i];
+                        d.className = "filter-item";
+                    };
+                    obj.className = "filter-item active";
+                }
+
+                // function sibling(elem) { //取elem除本身的兄弟节点
+                //     var a = [];
+                //     var b = elem.parentNode.children;
+                //     for (var i = 0; i < b.length; i++) {
+                //         if (b[i] !== elem) a.push(b[i]);
+                //     }
+                //     return a;
+                // }
+            </script>
+
+
+            <div class="blogs">
+                <li>
+                    <span class="blogpic"><a href="blog1.html">
+                            <img src="img/1.jpg" alt="">
+                        </a></span>
+                    <h3 class="blogtitle">
+                        <a href="blog1.html">关于响应式Web设计技巧以及入门</a>
+                    </h3>
+                    <div class="bloginfo">
+                        <p>html5和css3流行至今，我在做响应式的网站一直是在“尝试”的阶段。并没有深入的去研究和学习，浅显的理解就是根据屏幕分辨率的大小，网站布局、图片、文字大小等...</p>
+                    </div>
+                    <div class="autor">
+                        <span class="lm">
+                            <i class="fa fa-tag" aria-hidden="true"></i>
+                            <a href="#">前端</a>
+                        </span>
+                        <span class="dtime">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i> 2018-08-20
+                        </span>
+                        <span class="viewnum">
+                            <i class="fa fa-eye" aria-hidden="true"></i> 浏览(0)
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <span class="blogpic"><a href="blog1.html">
+                            <img src="img/1.jpg" alt="">
+                        </a></span>
+                    <h3 class="blogtitle">
+                        <a href="blog1.html">关于响应式Web设计技巧以及入门</a>
+                    </h3>
+                    <div class="bloginfo">
+                        <p>html5和css3流行至今，我在做响应式的网站一直是在“尝试”的阶段。并没有深入的去研究和学习，浅显的理解就是根据屏幕分辨率的大小，网站布局、图片、文字大小等...</p>
+                    </div>
+                    <div class="autor">
+                        <span class="lm">
+                            <i class="fa fa-tag" aria-hidden="true"></i>
+                            <a href="#">前端</a>
+                        </span>
+                        <span class="dtime">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i> 2018-08-20
+                        </span>
+                        <span class="viewnum">
+                            <i class="fa fa-eye" aria-hidden="true"></i> 浏览(0)
+                        </span>
+                    </div>
+                </li>
+            </div>
+
+        </div>
+        <div class="sidebar">
+            <div class="about">
+                <div class="avatar"><a href="../luoct/index.html"><img src="img/mytx.jpg"></a></div>
+                <p class="abname">罗承天</p>
+                <p class="abposition">川农学生</p>
+                <div class="abtext"> 川农物联网的在校学生，突然想学web前端， </div>
+            </div>
+            <div class="search">
+                <input type="text" class="input " placeholder="   请输入关键字 ">
+                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+            </div>
+            <div class="tags">
+                <h2 class="hometitle">标签</h2>
+                <ul>
+                    <a href="#" style="background: #036564;">html5</a>
+                    <a href="#" style="background: #3FB8AF;">css3</a>
+                    <a href="#" style="background: #3299BB;">javascript</a>
+                    <a href="#" style="background: #FE4365;">vue</a>
+                    <a href="#" style="background: #ffd96a;">node.js</a>
+                </ul>
+            </div>
+            <div class="rankings">
+                <h2 class="hometitle">点击排行</h2>
+                <ul>
+                    <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i>关于响应式Web设计技巧以及入门</a></li>
+                    <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i>关于响应式Web设计技巧以及入门</a></li>
+                    <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i>关于响应式Web设计技巧以及入门</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <h2 class="hometitle">友情链接</h2>
+                <ul>
+                    <a href=""><i class="fa fa-weibo" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-weixin" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-qq" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 
+        
+        <p>Design by luoct</p>
+    </div> -->
+    <a href="#" class="up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+
+
+</body>
+
+</html>

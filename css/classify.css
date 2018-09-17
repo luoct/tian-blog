@@ -1,0 +1,64 @@
+.content {
+    margin-top: 60px;
+    width: 1200px;
+    height: 1200px;
+}
+.classify {
+    float: left;
+    width: 70%;
+    overflow: hidden;
+}
+
+.search-wrap input {
+    padding: 10px 15px;
+    width: 70%;
+    height: 18px;
+    line-height:18px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.search-wrap i {
+    color: #ff9090;
+    font-size: 30px;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+.search-wrap i:hover{
+    color: #f34949;
+}
+.filter-wrap {
+    height: 115px;
+    padding: 20px 0 10px;
+    border-top: 1px solid #e5e9ef;
+    border-bottom: 1px solid #e5e9ef;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.filter-wrap ul {
+    display: inline-block;
+    margin: 2px 0;
+    padding-right: 70px;
+}
+.filter-wrap ul li {
+    float: left;
+    padding: 1px 10px; 
+    border-radius: 4px;
+    margin-right: 15px;
+    color: #000;
+    cursor: pointer;
+}
+.filter-wrap ul .filter-item:not(.active):hover {
+    color: #00a1d6;
+    
+}
+.filter-wrap ul .filter-item.active {
+    background-color: #00a1d6;
+    color:#fff;
+}
+.classify .blogs {
+    width: 85%;
+}

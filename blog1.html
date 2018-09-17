@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ddd</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="highlight/styles/default.css">
+    <script src="highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">个人博客</div>
+        <ul class="starlist">
+            <li><a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="MessageBoard.html">留言</a></li>
+            <li><a href="classify.html">分类</a></li>
+            <li><a href="index.html">首页</a></li>
+            <img src="img/h.png" height="66px" style="display:block; transform: translate(-230px, 0);">
+
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="blog">
+            <div class="position">
+                <a href="index.html"><i class="fa fa-home" aria-hidden="true" style="color: #f9499e;"></i></a>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <a href="#">技术杂谈</a>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <a href="blog1.html" style="color: #000;">关于响应式Web设计技巧以及入门</a>
+            </div>
+            <div class="article">
+                <div class="header">
+                    <div> 关于响应式Web设计技巧以及入门</div>
+                    <div class="meta">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>luoct
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>2018-08-20
+                        <i class="fa fa-eye" aria-hidden="true"></i>浏览(0)
+                        <i class="fa fa-comments-o" aria-hidden="true"></i>留言(0)
+                    </div>
+                </div>
+                <div class="text">
+                    <p>学习至今，我对响应式的网站没有深入的去研究和学习，浅显的理解就是根据屏幕分辨率的大小，网站布局、图片、文字大小等相应改变。以后使用平板、手机浏览网站的用户会越来越多，对于前端设计师，学好用html5、css3做响应式网站是势在必行。</p>
+
+                    <p>以往我们显示针对桌面电脑来进行宽度设计，然后将其缩小并针对小屏幕进行内容重排；现在我们应该首先针对小屏幕进行设计，然后逐步增强针对大屏幕的设计和内容。</p>
+
+                    <p><strong>三个简单步骤，让你的网站变成响应式网站</strong></p>
+
+                    <p>ios和Android浏览器都基于Webkit核心。这两种浏览器以及很多其他浏览器如chrome、opera，都支持用viewport
+                        meta元素覆盖默认的画布缩放设置，只需要在html的&lt;head&gt;标签中插入一个&lt;meta&gt;标签。&lt;meta&gt;标签中可以设置具体的宽度或者缩放比例。示例：</p>
+
+                    <pre><code>&lt;meta name="viewport" content="width=device-width,initial-scale=2,maximum-scale=3,user-scalable=no"&gt;</code></pre>
+
+                    <p>分析：<code>width=device-width</code>告诉浏览器页面的宽度应该等于设备宽度；<code>initial-scale=2</code>页面的缩放比例，设置比例为设备尺寸的2倍；<code>maximum-scale=3</code>,允许用户将页面最多放大至设备宽度的3倍；<code>user-scalable=no</code>禁止用户缩放。缩放是一个重要的辅助功能，所以实践中很少禁用。</p>
+
+                    <p><strong>一：粘贴下面的代码到&lt;head&gt;和&lt;/head&gt;标签之间:</strong></p>
+
+                    <pre><code>&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;</code></pre>
+
+                    <p>设置比例为1.0这表示浏览器将按照其视口的实际大小来渲染页面</p>
+
+                    <p><strong>二：针对不同视口宽度修正设计</strong></p>
+
+                    <p>设置viewport meta 标签后，现在我们针对不同视口修正设计效果，创建CSS样式表，并在页面中调用：</p>
+
+                    <div class="exp">
+                        <p>常见媒体查询</p>
+                        <pre><code>
+        /* 平板电脑布局: 481px 至 768px。样式继承自: 移动设备布局。 */
+        @media only screen and (min-width: 481px) {        
+            .class{       
+                background: #333;      
+            }        
+        }
+        
+        /* 桌面电脑布局: 769px 至最高 1232px。样式继承自: 移动设备布局和平板电脑布局。 */        
+        @media only screen and (min-width: 769px) {        
+            .class {        
+                background: #666;        
+            }        
+        }
+                        </code></pre>
+
+                    </div>
+
+                    <p><strong>三：字体、弹性图片、视频</strong></p>
+
+                    <p>对于响应式网站来说应该有响应式的字体，一个响应式的字体大小应关联它的父容器的宽度，这样它才可以适应客户端的屏幕。</p>
+
+                    <p>CSS3 规范引入了一个新的单位叫 rem，和 em 类相似，但相对于 HTML 元素来说， rem 更易于使用。</p>
+
+                    <p>rem 是相对于 HTML 元素的，不要忘了重置 HTML 的字体大小：</p>
+
+                    <code>html { font-size:100%; }</code>
+
+                    <p>完成后，您可以定义响应式的字体大小，如下所示：</p>
+
+                    <pre><code>
+        @media (min-width: 640px) { body {font-size:1rem;} }
+
+        @media (min-width:960px) { body {font-size:1.2rem;} }
+    
+        @media (min-width:1100px) { body {font-size:1.5rem;} }
+                    </code></pre>
+
+                    <p>请注意，旧浏览器不支持 rem 单元，所以不要忘了实现一个替代。</p>
+
+                    <p><strong>弹性图片</strong></p>
+
+                    <p>我们需要为图片设置<code>max-width:100%</code>和<code>height:auto</code>，来实现其弹性化。对于IE，仍然需要一点额外的工作：</p>
+
+                    <pre><code>
+        img {
+            max-width: 100%;        
+            height: auto;        
+            width: auto\9; /* ie8 */        
+        }
+                    </code></pre>
+
+                    <p><strong>弹性内嵌视频</strong></p>
+
+                    <p>同样的，对于视频，我们也需要做<code>max-width： 100%</code>的设置；但是Safari对embed的该属性支持不是很给力，所以我们以<code>width： 100%</code>来代替：</p>
+
+                    <pre><code>
+        .video embed,
+        .video object,    
+        .video iframe {    
+            width: 100%;    
+            height: auto;    
+        }
+                    </code></pre>
+                </div>
+            </div>
+            <div class="nextblog">
+                <p>上一篇：<a href="#">关于响应式Web设计技巧以及入门</a></p>
+                <p>下一篇：<a href="#">关于响应式Web设计技巧以及入门</a></p>
+            </div>
+            <div class="comment">
+                <h2 style="font-weight: 300;"><i class="fa fa-comment-o" aria-hidden="true"></i>评论</h2>
+                <div>未登录</div>
+                <textarea></textarea>
+                <button onclick="pinglun()">发表评论</button>
+                <div class="con">
+                    <span></span>
+                    <span>共2条评论</span>
+                    <ul class="pl">
+                        <li>
+                            <img src="img/tx1.jpg" class="tx">
+                            <div class="user">绿鲤鱼</div>
+                            <p class="text">第一！</p>
+                            <div class="info">
+                                <span class="floor">#1</span>
+                                <span class="time">1个小时前</span>
+                                <span class="like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+                                <span class="reply">回复</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/tx2.jpg" class="tx">
+                            <div class="user">甲鱼不是王八</div>
+                            <p class="text">沙发</p>
+                            <div class="info">
+                                <span class="floor">#2</span>
+                                <span class="time">30分钟前</span>
+                                <span class="like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+                                <span class="reply">回复</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+            <div class="tags">
+                <h2 class="hometitle">标签</h2>
+                <ul>
+                    <a href="#" style="background: #FE4365;">响应式</a>
+                </ul>
+            </div>
+            <div class="about">
+                <div class="avatar"><a href="../luoct/index.html"><img src="img/mytx.jpg"></a></div>
+                <p class="abname">罗承天</p>
+                <p class="abposition">川农学生</p>
+                <div class="abtext"> 川农物联网的在校学生，突然想学web前端， </div>
+            </div>
+            <div class="search">
+                <input type="text" class="input " placeholder="   请输入关键字 ">
+                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="rankings">
+                <h2 class="hometitle">点击排行</h2>
+                <ul>
+                    <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i>关于响应式Web设计技巧以及入门</a></li>
+                    <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i>关于响应式Web设计技巧以及入门</a></li>
+                    <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i>关于响应式Web设计技巧以及入门</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <h2 class="hometitle">友情链接</h2>
+                <ul>
+                    <a href=""><i class="fa fa-weibo" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-weixin" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-qq" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--     
+        
+        <p>Design by luoct</p>
+    </div> -->
+    <a href="#" class="up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+
+
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/comment.js"></script>
+</body>
+
+</html>
